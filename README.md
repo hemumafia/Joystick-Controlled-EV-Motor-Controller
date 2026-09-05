@@ -10,6 +10,8 @@ This project implements a **single-channel joystick-to-motor control system** us
 
 The focus was on understanding H-bridge motor drive fundamentals, PWM control via a microcontroller, dead zone filtering, and power stage grounding — concepts directly applicable to embedded motor control in EV and robotics systems.
 
+![overview](images/overview.jpg)
+
 ---
 
 ## Hardware Stack
@@ -74,6 +76,8 @@ Battery(–), Arduino GND, and L298N GND are tied to a common reference. This is
 **L298N ENA Jumper Removal**
 The L298N breakout board ships with a physical jumper that bypasses ENA, locking motors at full speed. Removing it hands PWM control back to the microcontroller.
 
+![implementation](images/implement.jpg)
+
 ---
 
 ## Pin Mapping
@@ -106,6 +110,8 @@ Motor: MOVING | Direction: BACKWARD | Joystick: 200 | PWM: 175
 - L298N 5V output → Arduino 5V (onboard regulator powers logic layer)
   - Do **not** simultaneously power Arduino from USB when doing this
 - Remove ENA jumper cap from L298N board before use
+
+![wiring](images/wiring.jpg)
 
 ---
 
